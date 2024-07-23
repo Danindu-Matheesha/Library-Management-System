@@ -4,6 +4,7 @@
  */
 package edu.ijse;
 import edu.ijse.view.MemberView;
+import edu.ijse.view.BookView;
 /**
  *
  * @author User
@@ -16,6 +17,7 @@ public class main {
      */
     public static void main(String[] args) throws Exception {
         new MemberView().setVisible(true);
+       //new BookView().setVisible(true);
     }
     
 }

@@ -39,29 +39,28 @@ public class MemberModel {
     }
 
     public ArrayList<MemberDto> getAllMember() throws Exception{
-        String sql = "SELECT * FROM MEMBERS";
+        String sql = "SELECT * FROM Members";
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet rst = statement.executeQuery();
 
         ArrayList<MemberDto> memberDtos = new ArrayList<>();
 
-
         while (rst.next()) {            
             MemberDto dto = new MemberDto(rst.getString("MemberId"), rst.getString("Name"), rst.getString("Address"),
-                    rst.getInt("PhoneNo"),rst.getString("DOB"),rst.getString(" RegisterDate"));
+            rst.getInt("PhoneNo"),rst.getString("DOB"),rst.getString("RegisterDate"));
             memberDtos.add(dto);
         }
         return memberDtos;
     }
 
     public MemberDto getMember(String MemberId) throws Exception{
-        String sql = "SELECT * FROM MEMBERS WHERE MemberId = ?";
+        String sql = "SELECT * FROM Members WHERE MemberId = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, MemberId);
         ResultSet rst = statement.executeQuery();
         while (rst.next()) {
             MemberDto dto = new MemberDto(rst.getString("MemberId"), rst.getString("Name"), rst.getString("Address"),
-                     rst.getInt("PhoneNo"),rst.getString("DOB"),rst.getString(" RegisterDate"));
+            rst.getInt("PhoneNo"),rst.getString("DOB"),rst.getString("RegisterDate"));
             return dto;
         }
         return null;
