@@ -11,7 +11,10 @@ package edu.ijse.dto;
 public class UserDto {
     private String Name;
     private String Password;
-
+    private String ComPassword;
+    private String LogName;
+    private String LogPassword;
+    
     public UserDto() {
     }
 

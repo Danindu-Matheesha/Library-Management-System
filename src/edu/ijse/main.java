@@ -8,6 +8,7 @@ import edu.ijse.view.MemberView;
 import edu.ijse.view.BookView;
 import edu.ijse.view.CategoryView;
 import edu.ijse.view.FirstPageView;
+import edu.ijse.view.LoginView;
 import edu.ijse.view.UserView;
 
 /**
@@ -25,7 +26,8 @@ public class main {
         //new BookView().setVisible(true);
         //new CategoryView().setVisible(true);
         //new FirstPageView().setVisible(true);
-        new UserView().setVisible(true);
+        //new UserView().setVisible(true);
+        new LoginView().setVisible(true);
     }
 
 }
