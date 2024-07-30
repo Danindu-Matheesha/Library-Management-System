@@ -6,10 +6,11 @@ package edu.ijse;
 
 import edu.ijse.view.MemberView;
 import edu.ijse.view.BookView;
+import edu.ijse.view.BorrowView;
 import edu.ijse.view.CategoryView;
 import edu.ijse.view.FirstPageView;
 import edu.ijse.view.LoginView;
-import edu.ijse.view.UserView;
+import edu.ijse.view.SignUp;
 
 /**
  *
@@ -28,6 +29,7 @@ public class main {
         //new FirstPageView().setVisible(true);
         //new UserView().setVisible(true);
         new LoginView().setVisible(true);
+        //new BorrowView().setVisible(true);
     }
 
 }

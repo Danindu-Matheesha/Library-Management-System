@@ -5,7 +5,7 @@
 package edu.ijse.model;
 
 import edu.ijse.db.DBConnection;
-import edu.ijse.dto.UserDto;
+import edu.ijse.dto.SignUpDto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,14 +16,14 @@ import java.util.ArrayList;
  *
  * @author User
  */
-public class UserModel {
+public class SignUpModel {
     private final Connection connection;
 
-    public UserModel() throws ClassNotFoundException, SQLException {
+    public SignUpModel() throws ClassNotFoundException, SQLException {
         this.connection = (Connection) DBConnection.getInstance().getConnection();
     }
 
-    public String SignUp (UserDto userDto) throws Exception{
+    public String SignUp (SignUpDto userDto) throws Exception{
         String sql = "INSERT INTO User VALUES(?,?)";
 
         PreparedStatement statement = connection.prepareStatement(sql);

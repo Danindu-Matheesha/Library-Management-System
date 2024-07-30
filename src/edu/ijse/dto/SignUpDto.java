@@ -8,17 +8,17 @@ package edu.ijse.dto;
  *
  * @author User
  */
-public class UserDto {
+public class SignUpDto {
     private String Name;
     private String Password;
     private String ComPassword;
     private String LogName;
     private String LogPassword;
     
-    public UserDto() {
+    public SignUpDto() {
     }
 
-    public UserDto(String Name, String Password) {
+    public SignUpDto(String Name, String Password) {
         this.Name = Name;
         this.Password = Password;
     }

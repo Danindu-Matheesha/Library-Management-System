@@ -227,7 +227,7 @@ public class LoginView extends javax.swing.JFrame {
     
     private void SignUp() {
         try {
-            new UserView().setVisible(true);
+            new SignUp().setVisible(true);
             this.dispose();
         } catch (Exception ex) {
             Logger.getLogger(LoginView.class.getName()).log(Level.SEVERE, null, ex);

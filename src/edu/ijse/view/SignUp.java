@@ -5,9 +5,9 @@
 package edu.ijse.view;
 
 
-import edu.ijse.controller.UserController;
+import edu.ijse.controller.SignUpController;
 import edu.ijse.db.DBConnection;
-import edu.ijse.dto.UserDto;
+import edu.ijse.dto.SignUpDto;
 import edu.ijse.dto.LoginDto;
 import javax.swing.JOptionPane;
 
@@ -15,15 +15,15 @@ import javax.swing.JOptionPane;
  *
  * @author User
  */
-public class UserView extends javax.swing.JFrame {
+public class SignUp extends javax.swing.JFrame {
     
-    private UserController userController;
+    private SignUpController userController;
     /**
      * Creates new form LoginView
      */
-    public UserView()throws Exception {
+    public SignUp()throws Exception {
         initComponents();
-        userController = new UserController();
+        userController = new SignUpController();
     }
 
     /**
@@ -168,7 +168,7 @@ public class UserView extends javax.swing.JFrame {
 
     private void SignUp() {
         try {
-            UserDto dto = new UserDto(txtName.getText(),txtPassword.getText());
+            SignUpDto dto = new SignUpDto(txtName.getText(),txtPassword.getText());
             String resp = userController.SignUp(dto);
             //System.out.println(resp);
             JOptionPane.showMessageDialog(this, resp);

@@ -34,6 +34,7 @@ public class FirstPageView extends javax.swing.JFrame {
         btnBook = new javax.swing.JButton();
         btnMember = new javax.swing.JButton();
         btnCategory = new javax.swing.JButton();
+        btnCategory1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +68,14 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
+        btnCategory1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCategory1.setText("Borrow");
+        btnCategory1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCategory1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -75,6 +84,7 @@ public class FirstPageView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(141, 141, 141)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCategory1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMember, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -90,7 +100,9 @@ public class FirstPageView extends javax.swing.JFrame {
                 .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 85, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnCategory1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -118,6 +130,10 @@ public class FirstPageView extends javax.swing.JFrame {
     private void btnCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategoryActionPerformed
         CategoryView();
     }//GEN-LAST:event_btnCategoryActionPerformed
+
+    private void btnCategory1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategory1ActionPerformed
+        BorrowView();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCategory1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,6 +173,7 @@ public class FirstPageView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBook;
     private javax.swing.JButton btnCategory;
+    private javax.swing.JButton btnCategory1;
     private javax.swing.JButton btnMember;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -181,6 +198,14 @@ public class FirstPageView extends javax.swing.JFrame {
     private void CategoryView() {
         try {
             new CategoryView().setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void BorrowView() {
+        try {
+            new BorrowView().setVisible(true);
         } catch (Exception ex) {
             Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
         }
