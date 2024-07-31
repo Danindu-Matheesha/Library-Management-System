@@ -9,35 +9,33 @@ package edu.ijse.dto;
  * @author User
  */
 public class ReturnDto {
-    private String ReturnId;
+    private String BorrowId;
     private String ReturnDate;// ReturanDay == TodayDate
     private Integer LateDates;
     private Integer Price;
-    private String BorrowId;
 
     public ReturnDto() {
     }
 
-    public ReturnDto(String ReturnId, String ReturnDate, Integer LateDates, Integer Price, String BorrowId) {
-        this.ReturnId = ReturnId;
+    public ReturnDto(String BorrowId, String ReturnDate, Integer LateDates, Integer Price) {
+        this.BorrowId = BorrowId;
         this.ReturnDate = ReturnDate;
         this.LateDates = LateDates;
         this.Price = Price;
+    }
+
+    /**
+     * @return the BorrowId
+     */
+    public String getBorrowId() {
+        return BorrowId;
+    }
+
+    /**
+     * @param BorrowId the BorrowId to set
+     */
+    public void setBorrowId(String BorrowId) {
         this.BorrowId = BorrowId;
-    }
-
-    /**
-     * @return the ReturnId
-     */
-    public String getReturnId() {
-        return ReturnId;
-    }
-
-    /**
-     * @param ReturnId the ReturnId to set
-     */
-    public void setReturnId(String ReturnId) {
-        this.ReturnId = ReturnId;
     }
 
     /**
@@ -82,23 +80,11 @@ public class ReturnDto {
         this.Price = Price;
     }
 
-    /**
-     * @return the BorrowId
-     */
-    public String getBorrowId() {
-        return BorrowId;
-    }
-
-    /**
-     * @param BorrowId the BorrowId to set
-     */
-    public void setBorrowId(String BorrowId) {
-        this.BorrowId = BorrowId;
-    }
-
     @Override
     public String toString() {
-        return "ReturnDto{" + "ReturnId=" + ReturnId + ", ReturnDate=" + ReturnDate + ", LateDates=" + LateDates + ", Price=" + Price + ", BorrowId=" + BorrowId + '}';
+        return "ReturnDto{" + "BorrowId=" + BorrowId + ", ReturnDate=" + ReturnDate + ", LateDates=" + LateDates + ", Price=" + Price + '}';
     }
+
+
     
 }

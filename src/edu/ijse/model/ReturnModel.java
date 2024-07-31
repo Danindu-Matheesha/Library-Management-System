@@ -24,14 +24,13 @@ public class ReturnModel {
     }
 
     public String saveReturn(ReturnDto returnDto) throws Exception{
-        String sql = "INSERT INTO returnbooks VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO ReturnBooks VALUES(?,?,?,?)";
 
         PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(1, returnDto.getReturnId());
+        statement.setString(1, returnDto.getBorrowId());
         statement.setString(2, returnDto.getReturnDate());// ReturanDay == TodayDate
         statement.setInt(3, returnDto.getLateDates());
         statement.setInt(4, returnDto.getPrice());
-        statement.setString(5, returnDto.getBorrowId());
 
         return statement.executeUpdate() >0 ? "Success" : "Fail";
     }
@@ -44,21 +43,21 @@ public class ReturnModel {
         ArrayList<ReturnDto> returnDtos = new ArrayList<>();
 
         while (rst.next()) {            
-            ReturnDto dto = new ReturnDto(rst.getString("ReturnId"), rst.getString("ReturnDate"), rst.getInt("LateDates"),rst.getInt("Price"),rst.getString("BorrowId"));
+            ReturnDto dto = new ReturnDto(rst.getString("BorrowId"),rst.getString("ReturnDate"), rst.getInt("LateDates"),rst.getInt("Price"));
             returnDtos.add(dto);// ReturanDay == TodayDate
         }
         return returnDtos;
     }
 
-    public ReturnDto getReturn(String ReturnId) throws Exception{
-        String sql = "SELECT * FROM returnbooks WHERE ReturnId = ?";
-        PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(1, ReturnId);
-        ResultSet rst = statement.executeQuery();
-        while (rst.next()) {
-            ReturnDto dto = new ReturnDto(rst.getString("ReturnId"), rst.getString("ReturnDate"), rst.getInt("LateDates"),rst.getInt("Price"),rst.getString("BorrowId"));
-            return dto;// ReturanDay == TodayDate
-        }
-        return null;
-    }
+//    public ReturnDto getReturn(String ReturnId) throws Exception{
+//        String sql = "SELECT * FROM returnbooks WHERE ReturnId = ?";
+//        PreparedStatement statement = connection.prepareStatement(sql);
+//        statement.setString(1, ReturnId);
+//        ResultSet rst = statement.executeQuery();
+//        while (rst.next()) {
+//            ReturnDto dto = new ReturnDto(rst.getString("BorrowId"),rst.getString("ReturnDate"), rst.getInt("LateDates"),rst.getInt("Price"));
+//            return dto;// ReturanDay == TodayDate
+//        }
+//        return null;
+//    }
 }
