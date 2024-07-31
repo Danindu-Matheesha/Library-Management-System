@@ -24,11 +24,13 @@ public class SignUpModel {
     }
 
     public String SignUp (SignUpDto userDto) throws Exception{
-        String sql = "INSERT INTO User VALUES(?,?)";
+        String sql = "INSERT INTO User VALUES(?,?,?)";
 
         PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(1, userDto.getName());
-        statement.setString(2, userDto.getPassword());
+        statement.setString(1, userDto.getUserId());
+        statement.setString(2, userDto.getName());
+        statement.setString(3, userDto.getPassword());
+
         
         return statement.executeUpdate() >0 ? "Success" : "Fail";
     }

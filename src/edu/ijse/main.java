@@ -10,7 +10,8 @@ import edu.ijse.view.BorrowView;
 import edu.ijse.view.CategoryView;
 import edu.ijse.view.FirstPageView;
 import edu.ijse.view.LoginView;
-import edu.ijse.view.SignUp;
+import edu.ijse.view.ReturnView;
+import edu.ijse.view.SignUpView;
 
 /**
  *
@@ -28,8 +29,9 @@ public class main {
         //new CategoryView().setVisible(true);
         //new FirstPageView().setVisible(true);
         //new UserView().setVisible(true);
-        new LoginView().setVisible(true);
+        //new LoginView().setVisible(true);
         //new BorrowView().setVisible(true);
+        new ReturnView().setVisible(true);
     }
 
 }

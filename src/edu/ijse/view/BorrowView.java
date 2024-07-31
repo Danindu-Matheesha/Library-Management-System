@@ -10,6 +10,7 @@ import edu.ijse.controller.MemberController;
 import edu.ijse.dto.BookDto;
 import edu.ijse.dto.BorrowDto;
 import edu.ijse.dto.MemberDto;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -391,6 +392,8 @@ public class BorrowView extends javax.swing.JFrame {
 
     private void saveBorrow() {
         // String resp;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String borrowDateText = txtBorrowDate.getText();
         try {
             BorrowDto dto = new BorrowDto(txtBorrowId.getText(), txtMemberId.getText(), txtBookId.getText(),
                     txtBorrowDate.getText(), txtReturnDate.getText());
@@ -410,6 +413,8 @@ public class BorrowView extends javax.swing.JFrame {
         txtBookId.setText("");
         txtBorrowDate.setText("");
         txtReturnDate.setText("");
+        lblMember.setText("");
+        lblBook.setText("");
     }
 
     private void loadTable() {

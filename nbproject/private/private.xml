@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/CMJD106/CouresWork/Library%20Management%20System/src/edu/ijse/view/SignUp.java</file>
+            <file>file:/F:/CMJD106/CouresWork/Library%20Management%20System/src/edu/ijse/view/ReturnView.java</file>
             <file>file:/F:/CMJD106/CouresWork/Library%20Management%20System/src/edu/ijse/main.java</file>
+            <file>file:/F:/CMJD106/CouresWork/Library%20Management%20System/src/edu/ijse/dto/ReturnDto.java</file>
+            <file>file:/F:/CMJD106/CouresWork/Library%20Management%20System/src/edu/ijse/dto/BorrowDto.java</file>
         </group>
     </open-files>
 </project-private>

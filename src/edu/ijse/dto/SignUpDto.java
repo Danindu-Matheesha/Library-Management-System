@@ -11,16 +11,15 @@ package edu.ijse.dto;
 public class SignUpDto {
     private String Name;
     private String Password;
-    private String ComPassword;
-    private String LogName;
-    private String LogPassword;
-    
+    private String UserId;
+
     public SignUpDto() {
     }
 
-    public SignUpDto(String Name, String Password) {
+    public SignUpDto(String Name, String Password, String UserId) {
         this.Name = Name;
         this.Password = Password;
+        this.UserId = UserId;
     }
 
     /**
@@ -51,10 +50,24 @@ public class SignUpDto {
         this.Password = Password;
     }
 
+    /**
+     * @return the MemberId
+     */
+    public String getUserId() {
+        return UserId;
+    }
+
+    /**
+     * @param UserId the MemberId to set
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     @Override
     public String toString() {
-        return "UserDto{" + "Name=" + Name + ", Password=" + Password + '}';
+        return "SignUpDto{" + "Name=" + Name + ", Password=" + Password + ", UserId=" + UserId + '}';
     }
-    
-    
+
+   
 }
