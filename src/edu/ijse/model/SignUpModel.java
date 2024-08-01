@@ -32,7 +32,7 @@ public class SignUpModel {
         statement.setString(2, userDto.getName());
         statement.setString(3, userDto.getPassword());
 
-        return statement.executeUpdate() > 0 ? "Success" : "Fail";
+        return statement.executeUpdate() > 0 ? "Success Add Sign Up" : "Error";
     }
 
     public String updateSginup(SignUpDto signupDto) throws Exception {
@@ -44,7 +44,7 @@ public class SignUpModel {
         statement.setString(2, signupDto.getPassword());
         statement.setString(3, signupDto.getUserId());
 
-        return statement.executeUpdate() > 0 ? "Success" : "Fail";
+        return statement.executeUpdate() > 0 ? "Success Add Upadete Sign Up" : "Fail";
     }
 
     public SignUpDto getUser(String UserId) throws Exception {

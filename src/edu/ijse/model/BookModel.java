@@ -34,7 +34,7 @@ public class BookModel {
         statement.setString(5, bookDto.getPublishedDate());
         statement.setInt(6, bookDto.getPrice());
         
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Add Book" : "Error";
     }
 
     public ArrayList<BookDto> getAllBook() throws Exception{
@@ -70,7 +70,7 @@ public class BookModel {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, bookId);
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Delete Book" : "Error";
 
     }
 
@@ -86,6 +86,6 @@ public class BookModel {
         statement.setInt(5, bookDto.getPrice());       
         statement.setString(6, bookDto.getBookId());
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Upadete Book" : "Error";
     }
 }

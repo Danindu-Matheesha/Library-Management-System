@@ -81,27 +81,29 @@ public class BorrowView extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Borrowing Book");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel2.setText("Borrow Id");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel3.setText("Member Id");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel4.setText("Book Id");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel5.setText("Borrow Date");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel7.setText("Return Date");
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
+        tblBorrow.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         tblBorrow.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -120,7 +122,7 @@ public class BorrowView extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblBorrow);
 
-        btnMember.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMember.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         btnMember.setText("Search");
         btnMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +130,7 @@ public class BorrowView extends javax.swing.JFrame {
             }
         });
 
-        btnBook.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBook.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         btnBook.setText("Search");
         btnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +138,7 @@ public class BorrowView extends javax.swing.JFrame {
             }
         });
 
-        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnDelete.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +146,7 @@ public class BorrowView extends javax.swing.JFrame {
             }
         });
 
-        btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnUpdate.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +154,7 @@ public class BorrowView extends javax.swing.JFrame {
             }
         });
 
-        btnSave.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnSave.setText("Borrow Book");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +162,7 @@ public class BorrowView extends javax.swing.JFrame {
             }
         });
 
-        btnClose.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClose.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         btnClose.setText("Close");
         btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -386,11 +388,11 @@ public class BorrowView extends javax.swing.JFrame {
             if (memberDto != null) {
                 lblMember.setText(" | "+"Name -: " + memberDto.getName()+" |");
             } else {
-                lblMember.setText("Member not found");
+                lblMember.setText("Member Not Found");
             }
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error at Search Member");
+            JOptionPane.showMessageDialog(this, "Error At Search Member");
         }
     }
 
@@ -405,7 +407,7 @@ public class BorrowView extends javax.swing.JFrame {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error at Search Book");
+            JOptionPane.showMessageDialog(this, "Error At Search Book");
         }
     }
 
@@ -422,7 +424,7 @@ public class BorrowView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error at save data");
+            JOptionPane.showMessageDialog(this, "Error At Add Borrow");
         }
     }
 
@@ -468,7 +470,7 @@ public class BorrowView extends javax.swing.JFrame {
             clearForm();
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at update Borrow");
+            JOptionPane.showMessageDialog(this, "Error At Update Borrow");
         }
     }
 
@@ -480,7 +482,7 @@ public class BorrowView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at  Delete");
+            JOptionPane.showMessageDialog(this, "Error at Borrow Delete");
         }
     }
 

@@ -40,13 +40,15 @@ public class FirstPageView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(java.awt.Color.lightGray);
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Library Management System");
 
-        btnBook.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnBook.setBackground(new java.awt.Color(204, 204, 255));
+        btnBook.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         btnBook.setText("Book");
         btnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +56,8 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnMember.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnMember.setBackground(new java.awt.Color(204, 204, 255));
+        btnMember.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         btnMember.setText("Member");
         btnMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +65,8 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnCategory.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnCategory.setBackground(new java.awt.Color(204, 204, 255));
+        btnCategory.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         btnCategory.setText("Category");
         btnCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +74,8 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnCategory2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnCategory2.setBackground(new java.awt.Color(204, 204, 255));
+        btnCategory2.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         btnCategory2.setText("Borrow");
         btnCategory2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +83,8 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnReturn.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnReturn.setBackground(new java.awt.Color(204, 204, 255));
+        btnReturn.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         btnReturn.setText("Return");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +92,7 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnLogout.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         btnLogout.setText("Log Out");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

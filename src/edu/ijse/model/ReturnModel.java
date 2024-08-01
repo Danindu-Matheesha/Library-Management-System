@@ -32,7 +32,7 @@ public class ReturnModel {
         statement.setInt(3, returnDto.getLateDates());
         statement.setInt(4, returnDto.getPrice());
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Add Return" : "Error";
     }
 
     public ArrayList<ReturnDto> getAllReturn() throws Exception{

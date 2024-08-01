@@ -31,7 +31,7 @@ public class CategoryModel {
         statement.setString(2, categoryDto.getName());
         statement.setString(3, categoryDto.getDescription());
         
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Add Category" : "Error";
     }
 
     public ArrayList<CategoryDto> getAllCategory() throws Exception{
@@ -65,7 +65,7 @@ public class CategoryModel {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, catId);
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Delete Category" : "Error";
 
     }
 
@@ -78,6 +78,6 @@ public class CategoryModel {
         statement.setString(2, categoryDto.getDescription());
         statement.setString(3, categoryDto.getCatId());
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Update Category" : "Error";
     }
 }

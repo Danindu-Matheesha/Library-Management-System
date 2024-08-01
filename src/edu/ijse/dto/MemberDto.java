@@ -13,18 +13,18 @@ public class MemberDto {
     private String Name;
     private String Address;
     private int PhoneNO;
-    private String DBO;
+    private String DOB;
     private String RegisterDate;
 
     public MemberDto() {
     }
 
-    public MemberDto(String MemberId, String Name, String Address, int PhoneNO, String DBO, String RegisterDate) {
+    public MemberDto(String MemberId, String Name, String Address, int PhoneNO, String DOB, String RegisterDate) {
         this.MemberId = MemberId;
         this.Name = Name;
         this.Address = Address;
         this.PhoneNO = PhoneNO;
-        this.DBO = DBO;
+        this.DOB = DOB;
         this.RegisterDate = RegisterDate;
     }
 
@@ -85,17 +85,17 @@ public class MemberDto {
     }
 
     /**
-     * @return the DBO
+     * @return the DOB
      */
-    public String getDBO() {
-        return DBO;
+    public String getDOB() {
+        return DOB;
     }
 
     /**
-     * @param DBO the DBO to set
+     * @param DOB the DOB to set
      */
-    public void setDBO(String DBO) {
-        this.DBO = DBO;
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
     }
 
     /**
@@ -114,8 +114,8 @@ public class MemberDto {
 
     @Override
     public String toString() {
-        return "MemberDto{" + "MemberId=" + MemberId + ", Name=" + Name + ", Address=" + Address + ", PhoneNO=" + PhoneNO + ", DBO=" + DBO + ", RegisterDate=" + RegisterDate + '}';
+        return "MemberDto{" + "MemberId=" + MemberId + ", Name=" + Name + ", Address=" + Address + ", PhoneNO=" + PhoneNO + ", DOB=" + DOB + ", RegisterDate=" + RegisterDate + '}';
     }
+
     
-   
 }

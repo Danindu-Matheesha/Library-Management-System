@@ -33,9 +33,9 @@ public String Login(LoginDto loginDto) throws Exception {
         try (ResultSet resultSet = statement.executeQuery()) {
             // Check if the query returned any rows
             if (resultSet.next()) {
-                return "Success";
+                return "Success Login";
             } else {
-                return "Fail";
+                return "Error";
             }
         }
     }

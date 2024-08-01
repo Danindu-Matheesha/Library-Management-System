@@ -66,30 +66,29 @@ public class BookView extends javax.swing.JFrame {
         setForeground(new java.awt.Color(0, 204, 204));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel1.setForeground(new java.awt.Color(204, 204, 255));
 
         txtPubName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         txtAuthor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel2.setText("Book Name");
 
         txtPrice.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel3.setText("Book Author");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel4.setText("Book Id");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel5.setText("Published Date");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel6.setText("Publisher Name");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel7.setText("Book  Price");
 
         txtPubDate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -103,13 +102,21 @@ public class BookView extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(204, 204, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Book");
         jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jLabel1.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+                jLabel1CaretPositionChanged(evt);
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
 
+        tblBook.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         tblBook.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -128,7 +135,7 @@ public class BookView extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblBook);
 
-        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnDelete.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +143,7 @@ public class BookView extends javax.swing.JFrame {
             }
         });
 
-        btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnUpdate.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +151,7 @@ public class BookView extends javax.swing.JFrame {
             }
         });
 
-        btnSave.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +159,7 @@ public class BookView extends javax.swing.JFrame {
             }
         });
 
-        btnClose.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClose.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         btnClose.setText("Close");
         btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,7 +250,7 @@ public class BookView extends javax.swing.JFrame {
                     .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnClose)
                 .addContainerGap())
@@ -266,6 +273,10 @@ public class BookView extends javax.swing.JFrame {
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
         CloseView();// TODO add your handling code here:
     }//GEN-LAST:event_btnCloseActionPerformed
+
+    private void jLabel1CaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jLabel1CaretPositionChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1CaretPositionChanged
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnDeleteActionPerformed
         deleteBook(); // TODO add your handling code here:
@@ -364,7 +375,7 @@ public class BookView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error at save data");
+            JOptionPane.showMessageDialog(this, "Error At Add Book");
         }
 
     }
@@ -396,7 +407,7 @@ public class BookView extends javax.swing.JFrame {
                 dtm.addRow(rowDate);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at Loading Data to Book Table");
+            JOptionPane.showMessageDialog(this, "Error At Loading Data To Book Table");
         }
     }
 
@@ -417,7 +428,7 @@ public class BookView extends javax.swing.JFrame {
             }
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at loading Book");
+            JOptionPane.showMessageDialog(this, "Error At Loading Book");
         }
     }
 
@@ -429,7 +440,7 @@ public class BookView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at Delete Delete");
+            JOptionPane.showMessageDialog(this, "Error At Book Delete");
         }
     }
 
@@ -442,7 +453,7 @@ public class BookView extends javax.swing.JFrame {
             clearForm();
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at update Book");
+            JOptionPane.showMessageDialog(this, "Error At Update Book");
         }
     }
 

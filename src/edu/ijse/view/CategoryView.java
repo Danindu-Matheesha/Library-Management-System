@@ -64,24 +64,25 @@ public class CategoryView extends javax.swing.JFrame {
 
         txtDesc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel2.setText("Category Name");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel3.setText("Description");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel4.setText("Category Id");
 
         txtName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Book Categories");
         jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        tblCategory.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         tblCategory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -100,7 +101,7 @@ public class CategoryView extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblCategory);
 
-        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnDelete.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +109,7 @@ public class CategoryView extends javax.swing.JFrame {
             }
         });
 
-        btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnUpdate.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +117,7 @@ public class CategoryView extends javax.swing.JFrame {
             }
         });
 
-        btnSave.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +127,7 @@ public class CategoryView extends javax.swing.JFrame {
 
         txtCatId.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        closeView.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        closeView.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         closeView.setText("Close");
         closeView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +147,7 @@ public class CategoryView extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +195,7 @@ public class CategoryView extends javax.swing.JFrame {
                     .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(closeView)
                 .addContainerGap())
@@ -305,7 +306,7 @@ public class CategoryView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error at save data");
+            JOptionPane.showMessageDialog(this, "Error At Add Category");
         }
 
     }
@@ -333,7 +334,7 @@ public class CategoryView extends javax.swing.JFrame {
                 dtm.addRow(rowDate);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at Loading Data to Category Table");
+            JOptionPane.showMessageDialog(this, "Error At Loading Data To Category Table");
         }
     }
 
@@ -351,7 +352,7 @@ public class CategoryView extends javax.swing.JFrame {
             }
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at loading Category");
+            JOptionPane.showMessageDialog(this, "Error At Loading Category");
         }
     }
 
@@ -363,7 +364,7 @@ public class CategoryView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at Category Delete");
+            JOptionPane.showMessageDialog(this, "Error At Category Delete");
         }
     }
 
@@ -376,7 +377,7 @@ public class CategoryView extends javax.swing.JFrame {
             clearForm();
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at update Category");
+            JOptionPane.showMessageDialog(this, "Error At Update Category");
         }
     }
 

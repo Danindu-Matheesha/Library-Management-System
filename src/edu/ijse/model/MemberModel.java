@@ -31,11 +31,11 @@ public class MemberModel {
         statement.setString(2, memberDto.getName());
         statement.setString(3, memberDto.getAddress());
         statement.setInt(4, memberDto.getPhoneNO());
-        statement.setString(5, memberDto.getDBO());
+        statement.setString(5, memberDto.getDOB());
         statement.setString(6, memberDto.getRegisterDate());
         
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Add Member" : "Error";
     }
 
     public ArrayList<MemberDto> getAllMember() throws Exception{
@@ -71,7 +71,7 @@ public class MemberModel {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, memberId);
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Delete Member" : "Error";
 
     }
 
@@ -83,10 +83,10 @@ public class MemberModel {
         statement.setString(1, memberDto.getName());
         statement.setString(2, memberDto.getAddress());
         statement.setInt(3, memberDto.getPhoneNO());
-        statement.setString(4, memberDto.getDBO());
+        statement.setString(4, memberDto.getDOB());
         statement.setString(5, memberDto.getRegisterDate());
         statement.setString(6, memberDto.getMemberId());
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Update Member" : "Error";
     }
 }

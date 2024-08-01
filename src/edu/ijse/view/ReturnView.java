@@ -79,14 +79,15 @@ public class ReturnView extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Script MT Bold", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Return Book");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel2.setText("Borrow Id");
 
-        btnBorrowSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBorrowSearch.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         btnBorrowSearch.setText("Search");
         btnBorrowSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,16 +95,16 @@ public class ReturnView extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel5.setText("Today Date");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Price");
+        jLabel6.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
+        jLabel6.setText("Price Rs.");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         jLabel7.setText("Late Days");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Century", 3, 18)); // NOI18N
         jButton2.setText("Return Book");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +122,7 @@ public class ReturnView extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        btnaddDates.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnaddDates.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         btnaddDates.setText("Add Dates");
         btnaddDates.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,15 +148,15 @@ public class ReturnView extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblReturn);
 
-        lblBorrowDate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblBorrowDate.setFont(new java.awt.Font("Bell MT", 3, 12)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Return Date");
+        jLabel3.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
+        jLabel3.setText("Return Date -:");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setText("Fine for one day");
+        jLabel8.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
+        jLabel8.setText("Fine for one day Rs.");
 
-        btnClose.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClose.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         btnClose.setText("Close");
         btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,8 +188,8 @@ public class ReturnView extends javax.swing.JFrame {
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(txtLateDays, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel8)
+                                        .addGap(10, 10, 10)
                                         .addComponent(txtFine, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(12, 12, 12)
@@ -203,7 +204,7 @@ public class ReturnView extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(btnaddDates)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblBorrowDate, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -244,11 +245,9 @@ public class ReturnView extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtFine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPrice))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtFine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPrice))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -386,7 +385,7 @@ public class ReturnView extends javax.swing.JFrame {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error at Search Borrow");
+            JOptionPane.showMessageDialog(this, "Error At Search Borrow");
         }
     }
 
@@ -400,7 +399,7 @@ public class ReturnView extends javax.swing.JFrame {
             clearForm();
             loadTable();
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error at save data");
+            JOptionPane.showMessageDialog(this, "Error At Save Return");
         }
     }
 
@@ -431,7 +430,7 @@ public class ReturnView extends javax.swing.JFrame {
                 dtm.addRow(rowDate);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error at Loading Data to Return Table");
+            JOptionPane.showMessageDialog(this, "Error At Loading Data To Return Table");
         }
     }
 
@@ -468,7 +467,7 @@ public class ReturnView extends javax.swing.JFrame {
 
         txtPrice.setText(String.valueOf(price));
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Invalid number of late days. Please enter a valid number.");
+        JOptionPane.showMessageDialog(this, "Invalid Number Of Late Days. Please Enter A Valid Number.");
         txtPrice.setText("0"); 
     }
     }

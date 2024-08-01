@@ -34,7 +34,7 @@ public class BorrowModel {
         statement.setString(4, borrowDto.getBorrweDate());
         statement.setString(5, borrowDto.getReturnDate());
         
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Add Borrow" : "Error";
     }
 
     public ArrayList<BorrowDto> getAllBorrow() throws Exception{
@@ -70,7 +70,7 @@ public class BorrowModel {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, borrowId);
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Delete Borrow" : "Error";
 
     }
 
@@ -85,6 +85,6 @@ public class BorrowModel {
         statement.setString(4, borrowDto.getReturnDate());
         statement.setString(5, borrowDto.getBorrowId());
 
-        return statement.executeUpdate() >0 ? "Success" : "Fail";
+        return statement.executeUpdate() >0 ? "Success Upadete Borrow" : "Error";
     }
 }
