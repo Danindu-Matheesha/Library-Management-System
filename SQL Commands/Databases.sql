@@ -1,0 +1,85 @@
+DROP DATABASE IF EXISTS Library;
+CREATE DATABASE Library;
+USE Library;
+
+CREATE TABLE Members(
+	MemberId VARCHAR(10) NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Address VARCHAR(30) NOT NULL,
+    PhoneNO INT(10) NOT NULL,
+    DOB VARCHAR(12) NOT NULL,
+    RegisterDate VARCHAR(30) NOT NULL,
+	CONSTRAINT PRIMARY KEY (MemberId)
+);
+
+INSERT INTO Members VALUES('M001','Kamal','Panadura',0787654345,'1990.10.20','2024.07.30');
+INSERT INTO Members VALUES('M002','Namal','Galle',0778569324,'1999.12.20','2024.07.30');
+INSERT INTO Members VALUES('M003','Sadun','Mathara',0745896325,'1996.06.10','2024.07.30');
+INSERT INTO Members VALUES('M004','Sunil','Galle',0767895412,'1999.12.20','2024.07.30');
+INSERT INTO Members VALUES('M005','Perera','Collombo',0776598753,'1999.02.15','2024.07.30');
+
+CREATE TABLE Books(
+	BookID VARCHAR(10) NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Author VARCHAR(30) NOT NULL,
+    PublisherName VARCHAR(50) ,
+    PublishedDate VARCHAR(12) NOT NULL,
+    Price VARCHAR(30) NOT NULL,
+	CONSTRAINT PRIMARY KEY (BookId)
+);
+
+INSERT INTO Books VALUES('B001','Madol Doova',' Martin Wickramasinghe','No','1947','475.00');
+INSERT INTO Books VALUES('B002','Hath Pana','Kumaratunga Munidasa','Malpiyali','2008','500.00');
+INSERT INTO Books VALUES('B003','Ape Gama','Martin Wickramasinghe','Sarasa','1940.01.01','450.00');
+
+CREATE TABLE Categories(
+	CatId VARCHAR(10) NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Description VARCHAR(30) NOT NULL,
+	CONSTRAINT PRIMARY KEY (CatId)
+);
+
+INSERT INTO Categories VALUES('C001','Cookbook',' I Can Cook');
+INSERT INTO Categories VALUES('C002','Biography','Interesting');
+INSERT INTO Categories VALUES('C003','Thriller','Eagerly Waiting');
+INSERT INTO Categories VALUES('C004','Horror','Scared');
+INSERT INTO Categories VALUES('C005','Childrens literature',' Appreciation');
+
+CREATE TABLE User(
+	UserID VARCHAR(10) NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+    Password VARCHAR(50) NOT NULL,
+	CONSTRAINT PRIMARY KEY (UserID)
+);
+
+INSERT INTO User VALUES('U001','Kamal','0000');
+INSERT INTO User VALUES('U002','Amal','0000');
+INSERT INTO User VALUES('U003','Sunil','0000');
+
+CREATE TABLE Borrow(
+	BorrowID VARCHAR(10) NOT NULL,
+	MemberId VARCHAR(10) NOT NULL,
+	BookId VARCHAR(10) NOT NULL,
+	BorrowDate VARCHAR(10) NOT NULL,
+	ReturnDate VARCHAR(10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (BorrowId),
+	CONSTRAINT FOREIGN KEY (MemberID) REFERENCES Members(MemberId),
+	CONSTRAINT FOREIGN KEY (BookID) REFERENCES Books(BookId)  
+);
+
+INSERT INTO Borrow VALUES('B001','M001','B001','2024-07-30','2024-08-10');
+INSERT INTO Borrow VALUES('B002','M002','B002','2024.07-30','2024-08-10');
+INSERT INTO Borrow VALUES('B003','M001','B002','2024.07-30','2024-08-10');
+
+CREATE TABLE ReturnBooks(
+	BorrowId VARCHAR(10)NOT NULL,
+	ReturnDate Date NOT NULL,
+	LateDates INT NOT NULL,
+	Price INT NOT NULL,
+	CONSTRAINT PRIMARY KEY (BorrowId),
+	CONSTRAINT FOREIGN KEY (BorrowID) REFERENCES Borrow(BorrowId) 
+);
+
+INSERT INTO ReturnBooks VALUES('B001','2024-08-10','0','0');
+INSERT INTO ReturnBooks VALUES('B002','2024-12-15','127','1270');
+
