@@ -48,16 +48,4 @@ public class ReturnModel {
         }
         return returnDtos;
     }
-
-//    public ReturnDto getReturn(String ReturnId) throws Exception{
-//        String sql = "SELECT * FROM returnbooks WHERE ReturnId = ?";
-//        PreparedStatement statement = connection.prepareStatement(sql);
-//        statement.setString(1, ReturnId);
-//        ResultSet rst = statement.executeQuery();
-//        while (rst.next()) {
-//            ReturnDto dto = new ReturnDto(rst.getString("BorrowId"),rst.getString("ReturnDate"), rst.getInt("LateDates"),rst.getInt("Price"));
-//            return dto;// ReturanDay == TodayDate
-//        }
-//        return null;
-//    }
 }

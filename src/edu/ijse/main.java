@@ -24,14 +24,18 @@ public class main {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
+        new LoginView().setVisible(true);
+        //new SignUpView().setVisible(true);
+        //new FirstPageView().setVisible(true);
         //new MemberView().setVisible(true);
         //new BookView().setVisible(true);
-        //new CategoryView().setVisible(true);
-        //new FirstPageView().setVisible(true);
-        //new UserView().setVisible(true);
-        //new LoginView().setVisible(true);
+        //new CategoryView().setVisible(true);        
         //new BorrowView().setVisible(true);
-        new ReturnView().setVisible(true);
+        //new ReturnView().setVisible(true);
+        
+
+
+
     }
 
 }

@@ -34,7 +34,9 @@ public class FirstPageView extends javax.swing.JFrame {
         btnBook = new javax.swing.JButton();
         btnMember = new javax.swing.JButton();
         btnCategory = new javax.swing.JButton();
-        btnCategory1 = new javax.swing.JButton();
+        btnCategory2 = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,7 +46,7 @@ public class FirstPageView extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Library Management System");
 
-        btnBook.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnBook.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         btnBook.setText("Book");
         btnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +54,7 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnMember.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMember.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         btnMember.setText("Member");
         btnMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +62,7 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnCategory.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCategory.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         btnCategory.setText("Category");
         btnCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,11 +70,27 @@ public class FirstPageView extends javax.swing.JFrame {
             }
         });
 
-        btnCategory1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnCategory1.setText("Borrow");
-        btnCategory1.addActionListener(new java.awt.event.ActionListener() {
+        btnCategory2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnCategory2.setText("Borrow");
+        btnCategory2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCategory1ActionPerformed(evt);
+                btnCategory2ActionPerformed(evt);
+            }
+        });
+
+        btnReturn.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        btnReturn.setText("Return");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
+
+        btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnLogout.setText("Log Out");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
             }
         });
 
@@ -80,29 +98,37 @@ public class FirstPageView extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(141, 141, 141)
+                .addGap(130, 130, 130)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnCategory1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMember, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnCategory2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMember, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addGap(42, 42, 42)
                 .addComponent(btnMember, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnCategory1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 111, Short.MAX_VALUE))
+                .addComponent(btnCategory2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -113,7 +139,7 @@ public class FirstPageView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -131,9 +157,17 @@ public class FirstPageView extends javax.swing.JFrame {
         CategoryView();
     }//GEN-LAST:event_btnCategoryActionPerformed
 
-    private void btnCategory1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategory1ActionPerformed
-        BorrowView();        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCategory1ActionPerformed
+    private void btnCategory2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategory2ActionPerformed
+        BorrowView();// TODO add your handling code here:
+    }//GEN-LAST:event_btnCategory2ActionPerformed
+
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        ReturnView();// TODO add your handling code here:
+    }//GEN-LAST:event_btnReturnActionPerformed
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        logoutView();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,8 +207,10 @@ public class FirstPageView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBook;
     private javax.swing.JButton btnCategory;
-    private javax.swing.JButton btnCategory1;
+    private javax.swing.JButton btnCategory2;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMember;
+    private javax.swing.JButton btnReturn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
@@ -185,6 +221,7 @@ public class FirstPageView extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.dispose();
     }
 
     private void BookView() {
@@ -193,6 +230,7 @@ public class FirstPageView extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.dispose();
     }
 
     private void CategoryView() {
@@ -201,6 +239,7 @@ public class FirstPageView extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.dispose();
     }
 
     private void BorrowView() {
@@ -209,6 +248,25 @@ public class FirstPageView extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.dispose();
+    }
+
+    private void ReturnView() {
+        try {
+            new ReturnView().setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }
+
+    private void logoutView() {
+        try {
+            new LoginView().setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(FirstPageView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
     }
 
 

@@ -69,5 +69,7 @@ public class SignUpDto {
         return "SignUpDto{" + "Name=" + Name + ", Password=" + Password + ", UserId=" + UserId + '}';
     }
 
+
+
    
 }

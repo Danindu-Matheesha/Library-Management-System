@@ -13,14 +13,24 @@ import java.util.ArrayList;
  * @author User
  */
 public class SignUpController {
-    private SignUpModel userModel;
+    private SignUpModel signupModel;
 
     public SignUpController() throws Exception{
-        this.userModel = new SignUpModel();
+        this.signupModel = new SignUpModel();
     }
 
     public String SignUp(SignUpDto userDto) throws Exception{
-        String resp = userModel.SignUp(userDto);
+        String resp = signupModel.SignUp(userDto);
         return resp;
+    }
+    
+    public String updateSginup(SignUpDto signupDto) throws Exception {
+        String resp = signupModel.updateSginup(signupDto);
+        return resp;
+    }
+        
+    public SignUpDto searchUser(String UserId) throws Exception{
+        SignUpDto signupDto = signupModel.getUser(UserId);
+        return signupDto;
     }
 }
